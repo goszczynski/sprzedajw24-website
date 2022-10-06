@@ -1,4 +1,16 @@
 .header {
     position: relative;
-    padding: 0 2rem 0 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+
+    &__logo{
+        width: 10rem;
+
+        @include mini-up {
+            width: 12rem;
+        }
+
+        @include small-up {
+            width: 16rem;
+        }
+    }
 }
