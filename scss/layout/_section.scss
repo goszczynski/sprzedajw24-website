@@ -1,0 +1,113 @@
+.section {
+    padding: 65px 0 0;
+
+    @include medium-up {
+        padding: 150px 0 0;
+    }
+}
+
+.showcase {
+    overflow: hidden;
+
+    &__text {
+        text-align: center;
+        margin-top: 69px;
+
+        @include medium-up {
+            text-align: left;
+            width: 60%;
+            margin-top: 100px;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+
+            @include medium-up {
+                margin-bottom: 49px;
+            }
+        }
+
+        & p {
+            margin-bottom: 44px;
+            width: 100%;
+
+            // @include paragraph;
+            @include medium-up {
+                margin-bottom: 57px;
+                width: 80%;
+            }
+        }
+    }
+
+    &__img {
+        z-index: -1;
+
+        &--desktop {
+            display: none;
+
+            @include small-up {
+                display: inline-block;
+                position: relative;
+                right: -15px;
+                margin-top: 30px;
+            }
+
+            @include medium-up {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 45%;
+                margin-top: unset;
+            }
+        }
+
+        &--mobile {
+            display: inline-block;
+            position: relative;
+            right: -15px;
+            margin-top: 60px;
+
+            @include small-up {
+                display: none;
+            }
+        }
+    }
+
+    & .flex {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+        @include medium-up {
+            flex-direction: row;
+        }
+    }
+}
+
+
+
+
+// .txt{
+//     position: relative;
+// }
+// @keyframes rotation {
+//     0% {
+//       transform:  rotate(0deg) ;
+//     }
+//     100% {
+//       transform:  rotate(360deg) ;
+//     }
+//   }
+// .txt::after {
+//     content: '';
+//     background: url('/img/shape-hexagon.svg') 0 0 no-repeat;
+//     background-size: 100%;
+//     width: 45vw;
+//     height: 45vw;
+//     position: absolute;
+//     left: -15vw;
+//     top: 0;
+//     z-index: -1;
+//     animation: rotation linear 72s;
+//     animation-iteration-count: infinite;
+// }

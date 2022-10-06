@@ -1,0 +1,94 @@
+.header__menu{
+    
+
+    &--menu-toggle{
+        position: absolute;
+        top: 0.2em;
+        right: 0.2em;
+        border: 0;
+        background-color:transparent;
+        font-size: 3em;
+        width: 1em;
+        height: 1em;
+        line-height: 0.4em;
+        text-indent: 5em;
+        white-space: nowrap;
+        overflow: hidden;
+
+        @media (min-width: 35em) {
+            display: none;
+        }
+    }
+    &--menu-toggle::after{
+        content: "\2261";
+        position: absolute;
+        top: 0.2em;
+        left: 0.2em;
+        display: block;
+        text-indent: 0;
+    }
+
+    &--menu-dropdown{
+        display: none;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        left: 0;
+        margin: 0;
+        background-color: $blue;
+
+        @media (min-width: 35em) {
+            display: block;
+            position: static;
+            background: none;
+        }
+    }
+
+    .nav-menu{
+        margin: 0;
+        padding-left: 0;
+        border: 1px solid $blue-light;
+        list-style: none;
+    
+
+        & li + li{
+            border-top: 1px solid $blue-light;
+
+            @media (min-width: 35em) {
+                border: 0;
+            }
+        }
+
+        & > li > a{
+            display: block;
+            padding: 0.8em 1em;
+            color: $white;
+            font-weight: normal;
+
+            @media (min-width: 35em) {
+                padding: 0.3em;
+                text-align: center;
+                color: green;
+                border: 0;
+                color: red !important;
+            }
+        }
+
+        @media (min-width: 35em) {
+            display: flex;
+            border: 0;
+            padding: 0 1em;
+        }
+
+        & > li{
+            @media (min-width: 35em) {        
+                flex: 1;
+            }
+        }
+    }
+}
+
+.header__menu.is-open .header__menu--menu-dropdown{
+    display: block;
+}
+

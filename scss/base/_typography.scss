@@ -1,0 +1,69 @@
+.heading {
+    font-weight: bold;
+    // margin: 15px 0;
+
+    &--1 {
+        font-size: 40px;
+        line-height: 47px;
+
+        @include large-up {
+            font-size: $font-size-1;
+            line-height: 61px;
+        }
+    }
+
+    &--2 {
+        font-size: $font-size-3;
+        line-height: $line-height-md;
+        
+        @include large-up {
+            font-size: $font-size-2;
+            line-height: $line-height-lg;
+        }
+    }
+
+    &--3 {
+        font-size: 26px;
+
+        @include large-up {
+            font-size: $font-size-3;
+        }
+    }
+    &--4 {
+        font-size: 26px;
+
+        @include large-up {
+            font-size: $font-size-3;
+        }
+    }
+    &--5 {
+        font-size: 26px;
+
+        @include large-up {
+            font-size: $font-size-3;
+        }
+    }
+    &--small {
+        font-size: 8px;
+
+        @include large-up {
+            font-size: $font-size-3;
+        }
+    }
+}
+
+.paragraph{
+    font-weight: normal;
+    // margin: 15px 0;
+   
+    &--big {
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 27px;
+
+        // @include large-up {
+        //     font-size: $font-size-1;
+        //     line-height: 61px;
+        // }
+    }
+}
