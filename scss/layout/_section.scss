@@ -1,113 +1,170 @@
-.section {
-    padding: 65px 0 0;
+.hero{
+    padding: 2rem 2rem 1rem 2rem;
+}
+.icon{
+    display: flex;
+    padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+    flex-wrap: wrap;
 
     @include medium-up {
-        padding: 150px 0 0;
-    }
-}
-
-.showcase {
-    overflow: hidden;
-
-    &__text {
-        text-align: center;
-        margin-top: 69px;
-
-        @include medium-up {
-            text-align: left;
-            width: 60%;
-            margin-top: 100px;
-        }
-
-        h1 {
-            margin-bottom: 24px;
-
-            @include medium-up {
-                margin-bottom: 49px;
-            }
-        }
-
-        & p {
-            margin-bottom: 44px;
-            width: 100%;
-
-            // @include paragraph;
-            @include medium-up {
-                margin-bottom: 57px;
-                width: 80%;
-            }
-        }
+        // flex-direction: row;
+        // flex-wrap: nowrap;
     }
 
-    &__img {
-        z-index: -1;
-
-        &--desktop {
-            display: none;
-
-            @include small-up {
-                display: inline-block;
-                position: relative;
-                right: -15px;
-                margin-top: 30px;
-            }
-
-            @include medium-up {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 45%;
-                margin-top: unset;
-            }
-        }
-
-        &--mobile {
-            display: inline-block;
-            position: relative;
-            right: -15px;
-            margin-top: 60px;
-
-            @include small-up {
-                display: none;
-            }
-        }
-    }
-
-    & .flex {
-        justify-content: flex-start;
-        align-items: center;
+    &__icon-box{
+        display: flex;
         flex-direction: column;
+       
+        align-items: center;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+        width: 20rem;
 
-        @include medium-up {
-            flex-direction: row;
+        // @include medium-up {
+        //     margin-top: 0;
+        // }
+    }
+
+    .icon__number{
+        position: relative;
+    
+        .circle-one{
+            background-color: rgb(44, 225, 179);
+            position: absolute;
+            left: 0px;
+            top:0px;
+            width: 7px;
+            height: 7px;
+            z-index: 98;
+            border-radius: 50%;
+        }
+        .circle-two{
+            background-color: $gray;
+            position: absolute;
+            left: 10px;
+            top:0px;
+            width: 7px;
+            height: 7px;
+            z-index: 98;
+            border-radius: 50%;
+        }
+        .circle-three{
+            background-color: $gray;
+            position: absolute;
+            left: 0px;
+            top:10px;
+            width: 7px;
+            height: 7px;
+            z-index: 98;
+            border-radius: 50%;
+        }
+        .circle-four{
+            background-color: $gray;
+            position: absolute;
+            left: 10px;
+            top:10px;
+            width: 7px;
+            height: 7px;
+            z-index: 98;
+            border-radius: 50%;
+        }
+        .number{
+            position: absolute;
+            left: 20px;
+            top:0px;
+            font-weight: bold;
+            // width: 7px;
+            // height: 7px;
+            z-index: 98;
+        }
+    }
+
+    &__icon-images{
+        width: 7rem;
+        margin: 2rem 0 1rem 0;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 4rem 2rem 6rem;
+    
+    
+
+    .images{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // border: 1px dashed gray;
+        
+        &__img{
+            // border: 1px dashed blue;
+            // padding: 0 2rem 0 2rem;
+            width: 40rem;
+        }
+
+        &__content{
+            padding: 2rem 6rem 2rem 6rem;
+            // border: 1px dashed red;
+            width: 35rem;
         }
     }
 }
 
+.txt{
+    padding: 1rem 6rem 1rem 6rem;
+    // text-align: center;
+    // margin-top: 6rem;;
+}
 
+.video{
+    width: 70%;
+    margin: 3rem auto 3rem auto;
+    // margin: 0 auto;
+    
+    -webkit-box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
+    box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
 
+    &__content{ 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
 
-// .txt{
-//     position: relative;
-// }
-// @keyframes rotation {
-//     0% {
-//       transform:  rotate(0deg) ;
-//     }
-//     100% {
-//       transform:  rotate(360deg) ;
-//     }
-//   }
-// .txt::after {
-//     content: '';
-//     background: url('/img/shape-hexagon.svg') 0 0 no-repeat;
-//     background-size: 100%;
-//     width: 45vw;
-//     height: 45vw;
-//     position: absolute;
-//     left: -15vw;
-//     top: 0;
-//     z-index: -1;
-//     animation: rotation linear 72s;
-//     animation-iteration-count: infinite;
-// }
+.call-us{
+    // padding: 1rem 6rem 1rem 6rem;
+    // border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 4rem 2rem 6rem;
+
+    .images{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // border: 1px dashed gray;
+
+        &__content{
+            // padding: 2rem 6rem 2rem 6rem;
+            // border: 1px dashed red;
+            width: 35rem;
+          
+        }
+        
+        &__img{
+            // border: 1px dashed blue;
+            // padding: 0 2rem 0 2rem;
+            width: 30rem;
+        }
+
+       
+    }
+}

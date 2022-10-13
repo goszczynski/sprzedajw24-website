@@ -1,41 +1,84 @@
 .footer {
-    padding: 55px 0;
+    // padding: 55px;
+    // border: 1px dashed greenyellow;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
     @include medium-up {
-        padding: 60px 0;
+        // border: 1px dashed orange;
     }
 
-    & .flex {
-        flex-direction: column;
-        align-items: flex-start;
 
-        @include medium-up {
-            flex-direction: row;
-            justify-content: space-between;
+    &__box {
+        // border: 1px solid black;
+        // padding: 5rem;
+        padding:2rem 8rem 8rem 8rem;
+
+        display: flex;  
+        justify-content: space-between;
+
+        &--border{
+            border-top: 1px solid $gray;
+            padding-top: 2rem;
+            color: $gray-darken;
         }
     }
 
-    &__logo {
-        & p {
-            font-size: $font-size-6;
-            margin-top: 4px;
+   &__menu{
 
-            @include medium-up {
-                font-size: 14px;
-            }
+        .header--5{
+            color: $black;
+            font-weight: bold;
+            display: block;
+            padding-left: .3rem;
         }
-    }
+   }
+   &__logo{
+      width: 15rem;
+   }
 
-    &__text {
-        margin-top: 25px;
-    
-        @include medium-up {
-            margin-top: 10px;
-        }
-        
-        & p {
-            font-size: $font-size-6;
-            margin-top: 10px;
-        }
-    }
+   &__nav{
+    display: flex;
+   }
 }
+.footer::before{
+    
+    content: '';
+    background: url("/img/shape-circle.svg") 0 0 no-repeat;
+    background-size: 100%;
+    width: 45vw;
+    height: 45vw;
+    position: absolute;
+    left: -15vw;
+    top: 0;
+    z-index: -1;
+    animation: rotation linear 8s;
+}
+
+@keyframes rotation {
+    0% {
+      transform:  rotate(0deg) ;
+    }
+    100% {
+      transform:  rotate(360deg) ;
+    }
+  }
+
+
+//back to top batton
+.top {
+    position: sticky;
+    width:35px;
+    aspect-ratio:1;
+    background: $violet-primary;
+    border-radius:5px;
+  }
+  .top:before {
+    content:"";
+    position:absolute;
+    inset:30%;
+    transform:translateY(20%) rotate(-45deg);
+    border-top:1px solid #fff;
+    border-right:1px solid #fff;
+  }
