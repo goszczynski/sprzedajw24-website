@@ -1,32 +1,34 @@
 .hero{
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 1rem 0 0 0;
+
+    @include medium-up {
+        padding: 2rem 2rem 1rem 2rem;
+    }
 }
 .icon{
     display: flex;
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 0 2rem 1rem 2rem;
     display: flex;
     justify-content: center;
     // flex-direction: column;
     flex-wrap: wrap;
 
     @include medium-up {
-        // flex-direction: row;
-        // flex-wrap: nowrap;
+        padding: 2rem 2rem 4rem 2rem;
     }
 
     &__icon-box{
         display: flex;
         flex-direction: column;
-       
         align-items: center;
-        padding: 2rem;
+        padding: 1.4rem;
         text-align: center;
-        margin-top: 2rem;
+        // margin-top: .1rem;
         width: 20rem;
 
-        // @include medium-up {
-        //     margin-top: 0;
-        // }
+        @include medium-up {
+            padding: 2rem;
+        }
     }
 
     .icon__number{
@@ -92,15 +94,25 @@
 .content{
     display: flex;
     flex-direction: column;
-    padding: 6rem 4rem 2rem 6rem;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
     
-    
+    @include medium-up {
+        padding: 1rem 6rem 1rem 6rem;
+    }
 
     .images{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         // border: 1px dashed gray;
+
+        @include medium-up {
+            // padding: 1rem 6rem 1rem 6rem;
+            flex-wrap: nowrap;
+          
+        }
         
         &__img{
             // border: 1px dashed blue;
@@ -109,27 +121,83 @@
         }
 
         &__content{
-            padding: 2rem 6rem 2rem 6rem;
-            // border: 1px dashed red;
-            width: 35rem;
+            padding: 1rem;
+
+            @include medium-up {
+                padding: 2rem 6rem 2rem 6rem;
+                width: 35rem;
+            }
+        }
+    }
+
+    &::before{
+        // content: '';
+        // background: url("../img/circle.svg") 0 0 no-repeat;
+        // background-size: 100%;
+        // width: 55rem;
+        // height: 55rem;
+        // position: absolute;
+        // right: -35rem;
+        // top: 0;
+        // z-index: -1;
+        // animation: rotation linear 5s;
+        // animation-iteration-count: infinite;
+
+        @include medium-up {
+            content: '';
+            background: url("../img/circle.svg") 0 0 no-repeat;
+            background-size: 100%;
+            width: 55rem;
+            height: 55rem;
+            position: absolute;
+            right: -35rem;
+            top: 0;
+            z-index: -1;
+            animation: rotation linear 5s;
+            animation-iteration-count: infinite;
+        }
+    }
+    &::after{
+        content: '';
+        width: 5rem;
+        height: 5rem;
+        border-radius: 5rem;
+        background: rgb(26, 38, 170, .5);
+        position: absolute;
+        right: -2rem;
+        top: 24rem;
+        z-index: 1;
+
+        @include medium-up {
+            right: 6rem;
+            top: 24rem;
+            z-index: 1;
         }
     }
 }
 
 .txt{
-    padding: 1rem 6rem 1rem 6rem;
+    margin: 0;
+    padding: 1rem;
     // text-align: center;
     // margin-top: 6rem;;
+    // border: 5px solid pink;
+
+    @include medium-up {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 6rem 2rem 6rem;
+    }
 }
 
 .video{
-    width: 70%;
-    margin: 3rem auto 3rem auto;
-    // margin: 0 auto;
-    
+    width: 95%;
+    margin: 0 auto;
     -webkit-box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
     -moz-box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
     box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
+    position: relative;
+    overflow: hidden;
 
     &__content{ 
         width: 100%;
@@ -137,24 +205,67 @@
         object-fit: cover;
         display: block;
     }
+
+    &::before{
+        content: '';
+        background: #4900E3;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 7rem;
+        position: absolute;
+        left: -10rem;
+        top: -5rem;
+        z-index: 1;
+    }
+    &::after{
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        border-radius: 2rem;
+        background: rgb(26, 38, 170, .8);
+        position: absolute;
+        right: -8rem;
+        bottom: -3rem;
+        z-index: 1;
+    }
+
+    @include medium-up {
+        width: 70%;
+        margin: 6rem auto 6rem auto;
+        -webkit-box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
+        box-shadow: 2px 7px 48px -10px rgba(66, 68, 90, 1);
+        position: relative;
+    }
+    
 }
 
 .call-us{
     // padding: 1rem 6rem 1rem 6rem;
-    // border: 1px solid pink;
+    // border: 6px solid pink;
+    position: relative;
     display: flex;
     flex-direction: column;
-    padding: 6rem 4rem 2rem 6rem;
+    padding: 2rem 1rem 1rem 1rem;
+    overflow: hidden;
+   
+    @include medium-up {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 6rem 0 0 6rem;
+    }
 
     .images{
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        // border: 1px dashed gray;
+        overflow: hidden;
 
         &__content{
-            // padding: 2rem 6rem 2rem 6rem;
-            // border: 1px dashed red;
+            padding: 0;
+            
             width: 35rem;
           
         }
@@ -165,6 +276,67 @@
             width: 30rem;
         }
 
-       
+        &::before{
+            content: '';
+            background: url("../img/circle-blue-2.svg") 0 0 no-repeat;
+            background-size: 100%;
+            width: 10rem;
+            height: 10rem;
+            position: absolute;
+            right: -6rem;
+            top: 6rem;
+            z-index: -1;
+            animation: rotation linear 12s;
+            animation-iteration-count: infinite;
+        }
+    
+        &::after{
+
+            @include medium-up {
+                width: 5rem;
+                height: 5rem;
+                border-radius: 5rem;
+                background: rgb(26, 38, 170, .2);
+                position: absolute;
+                right: -1rem;
+                top: 12rem;
+                z-index: -1;
+            }
+            
+        }
+    }
+    .txt{
+        margin-top: 5rem;
+    }
+
+    &::before{
+        content: '';
+        background: url("../img/circle-2.svg") 0 0 no-repeat;
+        background-size: 100%;
+        width: 45vw;
+        height: 45vw;
+        position: absolute;
+        left: -30rem;
+        // right: 50%;
+        // margin-left: -22vw;
+        // bottom: -70vh;
+        z-index: -1;
+        animation: rotation linear 5s;
+        animation-iteration-count: infinite;
+    }
+    &::after{
+
+        @include medium-up {
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            border-radius: 2rem;
+            background: rgb(26, 38, 170, .5);
+            position: absolute;
+            left: 2rem;
+            top: 9rem;
+            z-index: 1;
+            
+        }
     }
 }

@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 
     @include medium-up {
         // border: 1px dashed orange;
@@ -13,10 +14,16 @@
     &__box {
         // border: 1px solid black;
         // padding: 5rem;
-        padding:2rem 8rem 8rem 8rem;
+
+        padding:1rem;
 
         display: flex;  
         justify-content: space-between;
+
+
+        @include medium-up {
+            padding:2rem 8rem 2rem 8rem;
+        }
 
         &--border{
             border-top: 1px solid $gray;
@@ -26,6 +33,11 @@
     }
 
    &__menu{
+        display: none;
+
+        @include medium-up {
+            display: block;
+        }
 
         .header--5{
             color: $black;
@@ -35,26 +47,56 @@
         }
    }
    &__logo{
-      width: 15rem;
+      width: 10rem;
+
+      @include medium-up {
+        width: 15rem;
+    }
    }
 
    &__nav{
     display: flex;
    }
+
+   &::before{
+        content: '';
+        background: url("../img/circle-2.svg") 0 0 no-repeat;
+        background-size: 100%;
+        width: 40vw;
+        height: 40vw;
+        position: absolute;
+        left: 40%;
+        bottom: -25rem;
+        z-index: -1;
+        animation: rotation linear 12s;
+        animation-iteration-count: infinite;
+    }
+
+    &::after{
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        border-radius: 2rem;
+        background: rgb(26, 38, 170, .5);
+        position: absolute;
+        left: 65%;
+        top: 9rem;
+       
+        z-index: -1;
+        animation: rotation linear 16s;
+        animation-iteration-count: infinite;
+    }
+
+    .copy{
+        // color: red;
+        font-size: $font-size-6;
+
+        @include medium-up {
+            font-size: $font-size-5;
+        }
+    }
 }
-.footer::before{
-    
-    content: '';
-    background: url("/img/shape-circle.svg") 0 0 no-repeat;
-    background-size: 100%;
-    width: 45vw;
-    height: 45vw;
-    position: absolute;
-    left: -15vw;
-    top: 0;
-    z-index: -1;
-    animation: rotation linear 8s;
-}
+
 
 @keyframes rotation {
     0% {

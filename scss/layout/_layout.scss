@@ -1,12 +1,86 @@
-.container {
-    max-width: 1054px;
-    margin: 0 auto;
-    padding: 0 $grid-base * 1.5;
-    overflow: visible;
+.call-us{
+    
+   
+   
 
-    &--full {
-        max-width: 1440px;
+    .images{
+       
+
+        &__content--contact{
+            padding: 5rem 0 0 0;
+            
+            width: 20rem;
+          
+        }
+        
+        &__img{
+            
+            width: 30rem;
+        }
+
+        // &::before{
+        //     content: '';
+        //     background: url("../img/circle-blue-2.svg") 0 0 no-repeat;
+        //     background-size: 100%;
+        //     width: 12vw;
+        //     height: 12vw;
+        //     position: absolute;
+        //     right: -9rem;
+        //     top: 12rem;
+        //     z-index: -1;
+        //     animation: rotation linear 12s;
+        //     animation-iteration-count: infinite;
+        // }
+    
+        // &::after{
+
+        //     @include medium-up {
+        //         width: 5rem;
+        //         height: 5rem;
+        //         border-radius: 5rem;
+        //         background: rgb(26, 38, 170, .2);
+        //         position: absolute;
+        //         right: -1rem;
+        //         top: 12rem;
+        //         z-index: -1;
+        //     }
+            
+        // }
     }
+    .txt{
+        margin-top: 5rem;
+    }
+
+    // &::before{
+    //     content: '';
+    //     background: url("../img/circle-2.svg") 0 0 no-repeat;
+    //     background-size: 100%;
+    //     width: 45vw;
+    //     height: 45vw;
+    //     position: absolute;
+    //     left: -30rem;
+    //     // right: 50%;
+    //     // margin-left: -22vw;
+    //     // bottom: -70vh;
+    //     z-index: -1;
+    //     animation: rotation linear 5s;
+    //     animation-iteration-count: infinite;
+    // }
+    // &::after{
+
+    //     @include medium-up {
+    //         content: '';
+    //         width: 2rem;
+    //         height: 2rem;
+    //         border-radius: 2rem;
+    //         background: rgb(26, 38, 170, .5);
+    //         position: absolute;
+    //         left: 2rem;
+    //         top: 9rem;
+    //         z-index: 1;
+            
+    //     }
+    // }
 }
 
 
