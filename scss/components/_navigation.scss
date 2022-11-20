@@ -80,6 +80,10 @@
                 border-radius: $border-radius;
             }
         }
+
+        &--active{
+            color: $violet-primary;
+        }
     }
 
     @include medium-up {
@@ -108,3 +112,4 @@ span.blue{
        color: $white;
     }
 }
+
