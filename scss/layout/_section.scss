@@ -1,10 +1,4 @@
-.hero{
-    padding: 1rem 0 0 0;
 
-    @include medium-up {
-        padding: 2rem 2rem 1rem 2rem;
-    }
-}
 .icon{
     display: flex;
     padding: 0 2rem 1rem 2rem;

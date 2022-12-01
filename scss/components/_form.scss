@@ -1,3 +1,199 @@
 .main-form{
-    background-color: red;
+    padding: 1rem 0 0 0;
+    // border: 1px dashed #333;
+    position: relative;
+    padding: 1rem;
+    margin: 2rem auto 2rem auto;
+    max-width: 1300px;
+    color: white;
+    min-height: 100%;
+    
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: -1rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 5rem;
+        background-color: rgba(24, 65, 247, 0.5);
+    }
+
+    &__images{
+        
+        display: none;
+
+        
+
+        @include sm {
+            background: url("../img/hero.jpg") no-repeat;
+            width: 400px;
+            display: block;
+            min-height: 600px;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            right: -1rem;
+            z-index: -1;
+            border-radius:15px;
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -3rem;
+                right: -3rem;
+                width: 7rem;
+                height: 7rem;
+                border-radius: 7rem;
+                background-color: rgba(78, 78, 78, 0.217);
+                z-index: -20;
+            }
+        }
+    }
+
+    &__content{
+        background-color: $blue;
+        position:relative;
+        overflow: hidden;
+        display: block;
+        margin-top: 1.5rem;
+        border-radius:20px;
+        padding: 2rem;
+        // background-color: rgb(254, 0, 0);
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include sm {
+            background-color: $blue;
+            width: 80%;
+            
+            padding: 4rem;
+            
+            
+            flex-direction: row;
+            // align-items: flex-start;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -10rem;
+            left: -10rem;
+            width: 33rem;
+            height: 33rem;
+            border-radius: 33rem;
+            background-color: #3A24EF;
+            overflow: hidden;
+            // z-index: -1;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 4rem;
+            left: 25rem;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5rem;
+            background-color: #3A24EF;
+            overflow: hidden;
+            // z-index: -1;
+        }
+       
+
+        
+    }
+
+    
+
+    .txt{
+        // border: 1px solid rgb(95, 255, 21);
+        width: 100%;
+        padding: 0;
+        padding: 1rem;
+        margin-right: 2rem;
+        
+
+        @include small-up {
+            padding: 1rem;
+        }
+    }
+    .form{
+        // border: 1px solid rgb(95, 255, 21);
+        // flex-grow: 5;
+        width: 100%;
+        z-index: 10;
+        
+        @include small-up {
+            // width: 50%;
+        }
+
+        .form-input{
+            display: flex;
+            // flex-direction: column;
+            // align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 1.3rem;
+            // border: 1px solid white;
+        }
+
+        .form-input--small{
+            width: 50%;
+
+            &:nth-last-child(1){
+                margin-left: .7rem;
+            }
+            
+        }
+
+        .form-input .input{
+            background-color: $blue-light;
+            border: none;
+            outline: none;
+            font-size: $font-size-6;
+            color: #ffffff;
+            font-weight: bold;
+            font-family: 'Barlow', sans-serif;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            width: 100%;
+            border-radius: 15px;
+            
+        }
+        .form-input input::placeholder{
+            color: #ffffff;
+        }
+        .form-input--checkbox{
+            // border: 1px dashed red;
+            font-size: 10px;
+            
+        }
+    
+        .checkbox-round {
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            border-radius: 50%;
+            vertical-align: middle;
+            border: 2px solid $blue-light;
+            appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+            
+        }
+        .checkbox-round:checked{
+            background-color: $violet-primary;
+        }
+        .check-yes{
+            background-color: $blue-light;
+            
+            font-size: 10px;
+            color: #ffffff;
+           
+            font-family: 'Barlow', sans-serif;
+            padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
 }
+

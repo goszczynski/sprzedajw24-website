@@ -10,6 +10,12 @@
     }
 }
 
+@mixin sm {
+    @media (min-width: #{$bp-sm}) {
+        @content
+    }
+}
+
 @mixin medium-up {
     @media (min-width: #{$bp-medium}) {
         @content

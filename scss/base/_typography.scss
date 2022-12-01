@@ -56,6 +56,20 @@
             font-size: 11px;
         }
     }
+    &--form {
+        font-size: 36px;
+        font-weight: bold;
+        z-index: 10;
+        position: relative;
+
+        @include sm {
+            font-size: 30px; 
+        }
+
+        @include medium-up {
+            font-size: 40px; 
+        }
+    }
 }
 
 .paragraph{
@@ -81,6 +95,14 @@
         //     line-height: 61px;
         // }
     }
+}
+.paragraph-form{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.35rem;
+    margin: 2rem 0 2rem 0;
+    z-index: 10;
+    position: relative;
 }
 
 .phone-number{
